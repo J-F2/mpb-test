@@ -74,6 +74,24 @@ class Square{
 
             // friction
 
+        if(this.x > 300-this.width/2){
+            this.x = 300-this.width/2
+            this.vx = 0
+        }
+        if(this.x < this.width/2){
+            this.x = this.width/2
+            this.vx = 0
+        }
+        if(this.y > 300-this.width/2){
+            this.y = 300-this.width/2
+            this.vy = 0
+        }
+        if(this.y < this.width/2){
+            this.y = this.width/2
+            this.vy = 0
+        }
+            
+
         if(Math.abs(this.vx)<this.f){
             this.vx = 0
         }
@@ -81,7 +99,7 @@ class Square{
             this.vy = 0
         }
 
-        
+
         this.y -= this.vy/2
         this.x -= this.vx/2
     }

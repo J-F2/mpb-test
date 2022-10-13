@@ -12,6 +12,9 @@ html, body, textarea, button {
     font-family: 'Arvo';
 }
 
+#Counters {
+    font-family: 'Courier New', Courier, monospace !important;
+}
 
 #Canvas {
     background-color: #211f1f;
