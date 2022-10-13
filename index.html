@@ -1,21 +1,33 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
     </head>
     <body>
-        <h1><center>Canvas</center></h1>
+        <nav>
+            <ul id="NAV">
+              <li><a href="./index.html">2D Canvas</a></li>
+              <li><a href="./about.html">Test Page</a></li>
+            </ul>
+          </nav>
+          
+        <h1><center>mpb-test</center></h1>
         <div id="CanvasDiv">
             <canvas id="Canvas" width="300" height="300"></canvas>
             <h2 id="CountVX">0</h2>
             <h2 id="CountVY">0</h2>
             <h2 id="CountDiff">0</h2>  
-            <div>
-                Use the arrow keys to move the little shit around!
-            </div>
-            <a href="https://github.com/J-F2/mpb-test">Github Repo</a>
+            <p>
+                Use the arrow keys to move the little shit around!!
+                <br>
+                <a href="https://github.com/J-F2/mpb-test">Github Repo</a>
+            </p>
         </div>
+
+        <!--SCRIPTS-->
         <script src="square.js"></script>
         <script src="controls.js"></script>
         <script src="index.js"></script>
+
     </body>
 </html>
