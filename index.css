@@ -81,3 +81,11 @@ p {
     line-height: 30px;
     
 }
+
+hr {
+    height: 3px;
+    background-color: #d4d4d4;
+    width: 80%;
+    border-radius: 16px;
+    border: none;
+}
