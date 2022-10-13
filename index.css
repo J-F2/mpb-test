@@ -5,6 +5,14 @@ html, body {
     padding-top: 35px; 
     padding-bottom: 35px;
 }
+
+/* FONT SET */
+
+html, body, textarea, button {
+    font-family: 'Arvo';
+}
+
+
 #Canvas {
     background-color: #211f1f;
     border-radius: 16px;
@@ -35,21 +43,41 @@ nav ul {
     /* stays at top of page */
 }
 
-nav li {
-    display:inline-block
+nav li{
+    text-align:center;
+    display:inline-block;
+    padding: 14px 0 14px 0;
+    background-color: #211f1f;
     /*left to right, one line*/
 }
 
+nav li:hover {
+    background-color: #181717;
+}
+
+#censorButton {
+    position: fixed;
+    right: 0;
+    padding: 8px 8px 8px 8px;
+    margin: 8px;
+    font-size: small;
+    background-color:#181717;
+    border-radius: 16px;
+    color: white;
+    border: none;
+}
+
+
 nav a{
-    display: block;
     /*visible change?*/
     color: white;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 14px 20px 14px 20px;
 }
 
 p {
     align-items: center;
     text-align: center;
     line-height: 30px;
+    
 }

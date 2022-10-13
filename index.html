@@ -2,14 +2,17 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+
+        <title>2D Canvas</title>
     </head>
-    <body>
+    <body id="body">
         <nav>
             <ul id="NAV">
               <li><a href="./index.html">2D Canvas</a></li>
               <li><a href="./about.html">Test Page</a></li>
+              <button type="button" id="censorButton" onclick="censorToggle()">Toggle Censor</button>
             </ul>
-          </nav>
+        </nav>
           
         <h1><center>mpb-test</center></h1>
         <div id="CanvasDiv">
@@ -18,16 +21,17 @@
             <h2 id="CountVY">0</h2>
             <h2 id="CountDiff">0</h2>  
             <p>
-                Use the arrow keys to move the little shit around!!
+                Use the arrow keys to censor move the little shit around!!
                 <br>
                 <a href="https://github.com/J-F2/mpb-test">Github Repo</a>
             </p>
         </div>
-
+        
         <!--SCRIPTS-->
         <script src="square.js"></script>
         <script src="controls.js"></script>
         <script src="index.js"></script>
+        <script src="censor.js"></script>
 
     </body>
 </html>
