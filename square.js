@@ -14,7 +14,7 @@ class Square{
         this.max = 5;
         this.f = 0.15;
         this.maxD = (Math.sin(45 * (Math.PI/180)) * this.max + this.f).toFixed(1);
-        this.a = 0.5;
+        this.a = 0.75;
         // this.vd = Math.sin(45*(Math.PI/180)) * this.v
         
         this.controls=new Controls();

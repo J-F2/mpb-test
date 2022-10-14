@@ -1,19 +1,25 @@
 <html>
-    <head>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
         <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        
         <title>2D Canvas</title>
     </head>
     <body id="body">
         <nav>
             <ul id="NAV">
-              <li><a href="./index.html">2D Canvas</a></li>
-              <li><a href="./about.html">Test Page</a></li>
+                <!-- links -->
+              <li class="navLong"><a href="./index.html">2D Canvas</a></li>
+              <li class="navLong"><a href="pages/about.html">About</a></li>
+              <!-- icons -->
+              <li class="navShort"><a href="./index.html"><i class="fa-solid fa-chalkboard" onclick></i></a></li>
+              <li class="navShort"><a href="pages/about.html"><i class="fa-solid fa-list" onclick></i></a></li>
+              <!-- censor button -->
               <button type="button" id="censorButton" onclick="censorToggle()">Toggle Censor</button>
             </ul>
         </nav>
-          
+        <span>WARNING: arrow key scroll is disabled!</span>
         <h1><center>mpb-test</center></h1>
         <div id="CanvasDiv">
             <canvas id="Canvas" width="300" height="300"></canvas>
@@ -34,7 +40,5 @@
         <script src="square.js"></script>
         <script src="controls.js"></script>
         <script src="index.js"></script>
-        <script src="censor.js"></script>
-
     </body>
 </html>

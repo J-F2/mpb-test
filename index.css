@@ -4,11 +4,12 @@ html, body {
     font-family: 'Arvo';
     padding-top: 35px; 
     padding-bottom: 35px;
+    
 }
 
 /* FONT SET */
 
-html, body, textarea, button {
+html, body, textarea, button, pre {
     font-family: 'Arvo';
 }
 
@@ -38,8 +39,8 @@ nav ul {
     overflow: hidden;
     /*??*/
     background-color: #211f1f;
-    text-align:center;
-
+    justify-content: center;
+    display: flex;
     position: fixed;
     top: 0;
     width: 100%;
@@ -48,10 +49,16 @@ nav ul {
 
 nav li{
     text-align:center;
-    display:inline-block;
+    /* display:inline-block; */
     padding: 14px 0 14px 0;
     background-color: #211f1f;
+    color: white;
+    flex-shrink: 0;
     /*left to right, one line*/
+}
+
+.navIcons {
+    display: none;
 }
 
 nav li:hover {
@@ -91,4 +98,32 @@ hr {
     width: 80%;
     border-radius: 16px;
     border: none;
+}
+
+span {
+    margin: auto;
+    display: table;
+}
+
+.preformatted {
+    text-align: center;
+}
+
+
+/* Hide short text by default (resolution > 1200px) */
+.navShort { display: none; }
+
+/* When resolution <= 1200px, hide full text and show short text */
+
+@media (max-width: 350px) {
+  .navShort { display: inline-block; }
+  .navLong { display: none; }
+}
+
+@media (max-width: 400px) {
+  #censorButton { display: none; } 
+}
+
+span {
+    text-align: center;
 }
