@@ -15,7 +15,7 @@ html, body, textarea, button, pre {
     font-family: 'Courier New', Courier, monospace !important;
 }
 
-#Canvas {
+canvas {
     background-color: #211f1f;
     border-radius: 16px;
 }
