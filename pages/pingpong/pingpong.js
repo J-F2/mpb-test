@@ -5,68 +5,47 @@ ctx = canvas.getContext("2d")
 // declaring object variables
 // then adding those objects to an array "objects"
 const ball = new Ball(150, 150, 6)
-const paddle = new Paddle(20,150,10,100)
-const objects = [ball, paddle]
-
-// setting ctx fill color
-
-// takes each object in "objects" and draws it
-// function draw(objects) {
-//     ctx.fillStyle = "white"
-//     objects.forEach(o => {
-//         if (o.hasOwnProperty('radius')) {
-//         ctx.beginPath();
-//         ctx.arc(
-//             o.x,
-//             o.y,
-//             o.radius,
-//             0,
-//             2 * Math.PI
-//         )
-//         ctx.fill();
-//     } else {
-//         ctx.beginPath();
-//         ctx.rect(
-//             o.x - o.width/2,
-//             o.y - o.height/2 ,
-//             o.width,
-//             o.height
-//         )
-//         ctx.fill();
-//     }
-//   })
-// }
-
-// function update(objects) {
-//     objects.forEach(o => {
-//         o.update();
-//     });
-// }
+const paddle = new Paddle(20,150,10,60)
 
 function draw(o) {
     ctx.fillStyle = "white"
         if (o.hasOwnProperty('radius')) {
-        ctx.beginPath();
-        ctx.arc(
-            o.x,
-            o.y,
-            o.radius,
-            0,
-            2 * Math.PI
-        )
-        ctx.fill();
-    } else {
-        ctx.beginPath();
-        ctx.rect(
-            o.x - o.width/2,
-            o.y - o.height/2 ,
-            o.width,
-            o.height
-        )
-        ctx.fill();
-    }
+            ctx.beginPath();
+            ctx.arc(
+                o.x,
+                o.y,
+                o.radius,
+                0,
+                2 * Math.PI
+            )
+            ctx.fill();
+        } else {
+            ctx.beginPath();
+            ctx.rect(
+                o.x - o.width/2,
+                o.y - o.height/2 ,
+                o.width,
+                o.height
+            )
+            ctx.fill();
+        }
 }
 
+function divider() {
+    if (ctx.setLineDash !== undefined) {
+        ctx.setLineDash([40, 25]);
+        }
+    //   if (ctx.mozDash !== undefined) {
+    //     ctx.mozDash = [5, 10];
+    //   }
+        ctx.beginPath();
+        ctx.lineWidth = "4";
+        ctx.strokeStyle = "rgba(73, 73, 73, 0.8)";
+        ctx.moveTo(150, 0);
+        ctx.lineTo(150, 300);
+        ctx.stroke();
+        ctx.fill();
+}
 
 animate();
 
@@ -82,6 +61,7 @@ function animate(){
     // ctx.moveTo(0, paddle.lowerBound);
     // ctx.lineTo(300, paddle.lowerBound);
     // ctx.stroke();
+    divider();
     draw(ball);
     draw(paddle);
     requestAnimationFrame(animate);
