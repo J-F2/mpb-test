@@ -1,5 +1,5 @@
 # What browser shows --- What the page actually is
-/              /index.html                       200
+/              /index.html                        200
 # http status code                                ^^^
 
 /about          /pages/about.html                 200
