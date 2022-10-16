@@ -13,19 +13,28 @@ class Ball {
     update() {
         if (this.x-this.radius/2 <= paddle.x+paddle.width/2 && this.bounce != "paddle") {
             if (this.y >= paddle.y - paddle.height/2 && this.y <= paddle.y + paddle.height/2) {
-                // if (this.y > paddle.y) {
-                //     this.vy += 0.5
-                // } else {
-                //     this.vy -= 0.5
-                // }
+
+
+                if (this.vx < 0) {
+                    this.vx -= 0.25
+                } else {
+                    this.vx += 0.25
+                }
+
+
                 this.vx -= this.vx*2
+                this.vy = (Math.random() + 0.5) * Math.abs(this.vx) * Math.sign(this.vy)
+
+                console.log(this.vy)
+                
+
                 this.bounce = "paddle";
             }
         }
         
         // change Y randomly each bounce, so it wont stay the same
         
-        if (this.x < 0) {
+        if (this.x-this.radius < 10) {
             this.vx = Math.ceil(Math.random() * 2) * (Math.round(Math.random()) ? 1 : -1)
             this.vy = Math.ceil(Math.random() * 2) * (Math.round(Math.random()) ? 1 : -1)
             this.y = 150
@@ -36,11 +45,11 @@ class Ball {
         if (this.x+this.radius/2 >= 300 && this.bounce != "back") {
             this.vx -= this.vx*2
             if (this.vx < 0) {
-                this.vx -= 0.5
-                this.vy -= 0.25
+                this.vx -= 0.25
+                this.vy -= 0.125
             } else {
-                this.vx += 0.5
-                this.vy -= 0.25
+                this.vx += 0.25
+                this.vy += 0.125
             }
             this.bounce = "back"
         }
@@ -70,7 +79,7 @@ class Paddle {
         // this.lowerBound = this.y + this.height/2
         // this.upperBound = this.y - this.height/2
         
-        this.v = 3
+        this.v = 4
         
         this.controls = new PaddleControls();
     }
