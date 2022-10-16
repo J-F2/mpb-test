@@ -3,4 +3,4 @@
 # http status code                                ^^^
 
 /about          /pages/about.html                 200
-/pingpong       /pages/pingpong/pingpong.html     200
+/pingpong       /pages/games/pingpong.html        200
