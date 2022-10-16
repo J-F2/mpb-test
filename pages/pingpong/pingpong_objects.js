@@ -23,7 +23,7 @@ class Ball {
 
 
                 this.vx -= this.vx*2
-                this.vy = (Math.random() + 0.5) * Math.abs(this.vx) * Math.sign(this.vy)
+                this.vy = (Math.random() + 0.25) * Math.abs(this.vx) * Math.sign(this.vy)
 
                 console.log(this.vy)
                 
