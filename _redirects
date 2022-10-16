@@ -1,6 +1,6 @@
 # What browser shows --- What the page actually is
-/*              /index.html                       200 
+/*              /index.html                       
 # http status code                                ^^^
 
-/about/*        /about.html                       200
-/pingpong/*     /pages/pingpong/pingpong.html     200
+/about/*        /about.html                       
+/pingpong/*     /pages/pingpong/pingpong.html     
