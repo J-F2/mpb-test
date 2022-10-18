@@ -4,8 +4,11 @@ ctx = canvas.getContext("2d")
 
 // declaring object variables
 // then adding those objects to an array "objects"
+const game = new Game()
 const ball = new Ball(150, 150, 6)
 const paddle = new Paddle(20,150,10,60)
+const cpu = new CPU(280,150,10,60)
+ 
 
 function draw(o) {
     ctx.fillStyle = "white"
@@ -52,17 +55,24 @@ animate();
 function animate(){
     ball.update();
     paddle.update();
+    game.update();
+    cpu.update();
     canvas.height = canvas.height
-    // ctx.beginPath();
-    // ctx.moveTo(0, paddle.upperBound);
-    // ctx.lineTo(300, paddle.upperBound);
-    // ctx.stroke();
-    // ctx.beginPath();
-    // ctx.moveTo(0, paddle.lowerBound);
-    // ctx.lineTo(300, paddle.lowerBound);
-    // ctx.stroke();
+    ctx.textAlign = "center"
+    ctx.fillStyle = "rgba(95, 90, 90, 0.9)"
+    ctx.font = "25px Arvo";
+    ctx.fillText(game.myScore, 23, 32,)
+    ctx.fillText(game.cpuScore, 277, 32,)
+    ctx.ctx.arc(
+        290,
+        o.y,
+        o.radius,
+        0,
+        2 * Math.PI
+    )
     divider();
     draw(ball);
     draw(paddle);
+    draw(cpu);
     requestAnimationFrame(animate);
 }

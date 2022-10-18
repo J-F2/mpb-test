@@ -21,6 +21,8 @@ canvas {
 }
 #CanvasDiv {
     text-align: center;
+    font-family:"Arvo";
+    position: relative;
 }
 
 h2 {
@@ -147,3 +149,4 @@ ul {
     height: 2px;
     opacity: 0.2;
 }
+
