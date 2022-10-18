@@ -63,13 +63,6 @@ function animate(){
     ctx.font = "25px Arvo";
     ctx.fillText(game.myScore, 23, 32,)
     ctx.fillText(game.cpuScore, 277, 32,)
-    ctx.ctx.arc(
-        290,
-        o.y,
-        o.radius,
-        0,
-        2 * Math.PI
-    )
     divider();
     draw(ball);
     draw(paddle);
