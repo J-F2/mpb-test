@@ -1,0 +1,67 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="../../index.css">
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+        <title>About</title>
+    </head>
+    <body id="body">
+        <nav>
+            <ul id="NAV">
+                <!-- links -->
+              <li class="navLong"><a href="/index">2D Canvas</a></li>
+              <li class="navLong"><a href="/about">About</a></li>
+              <li class="navLong"><a href="/pingpong">PingPong</a></li>
+              <!-- icons -->
+              <li class="navShort"><a href="/index"><i class="fa-solid fa-chalkboard" onclick></i></a></li>
+              <li class="navShort"><a href="/about"><i class="fa-solid fa-list" onclick></i></a></li>
+              <li class="navShort"><a href="/pingpong"><i class="fa-solid fa-table-tennis-paddle-ball"></i></a></li>
+              <!-- censor button -->
+              <button type="button" id="censorButton" onclick="censorToggle()">Toggle Censor</button>
+            </ul>
+        </nav>
+        <br>
+        <h1 class="center" id="test">EMOJI GENERATOR</h1>
+        <hr>
+
+
+        <div class="emoji-background">
+            <div id="emoji-container">
+                <div id="emoji-1">
+                    ❓
+                </div>
+                <div id="emoji-2">
+                    ❓
+                </div>
+                <div id="emoji-3">
+                    ❓
+                </div>
+        
+                
+            </div>
+            <button class="emoji-button" onclick="randomize()">Generate Emojis</button>
+        </div>
+
+        <p class="center"> 
+            PATIENCE!! takes a tiny bit to load because of Twemoji
+            <br><br>
+            <input type="checkbox" id="flag-toggle" > don't include flags
+        </p>
+        
+        
+        
+        <script src="emoji.js"></script>
+        <script>
+            twemoji.parse(
+                document.body, {     
+                base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',
+                folder: 'svg',
+                ext: '.svg'
+                }
+    )
+        </script>
+    </body>
+</html>

@@ -8,6 +8,9 @@ const game = new Game()
 const ball = new Ball(150, 150, 6)
 const paddle = new Paddle(20,150,10,60)
 const cpu = new CPU(280,150,10,60)
+
+let end = false;
+let result
  
 
 function draw(o) {
@@ -50,6 +53,19 @@ function divider() {
         ctx.fill();
 }
 
+function endCheck() {
+    if (game.myScore === 10 || game.cpuScore === 10) {
+        end = true;
+    }
+
+
+    if (myScore === 10) {
+        result = "WIN"
+    } else {
+        result = "LOSE"
+    }
+}
+
 animate();
 
 function animate(){
@@ -67,5 +83,7 @@ function animate(){
     draw(ball);
     draw(paddle);
     draw(cpu);
-    requestAnimationFrame(animate);
+    if (!end) {
+        requestAnimationFrame(animate);
+    }
 }
