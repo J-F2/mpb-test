@@ -185,3 +185,9 @@ ul {
   border-radius: 20px;
 }
 
+.block {
+    padding: 0px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
